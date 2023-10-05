@@ -8,6 +8,10 @@ module.exports = {
 				'roboto': ['Roboto', 'sans-serif'],
 				'nunito': ["'Nunito'", 'sans-serif'],
 			},
+			colors: {
+				primary: '#f2c56a',
+				secondary: '#43466f'
+			}
 		},
 	},
 	plugins: [],

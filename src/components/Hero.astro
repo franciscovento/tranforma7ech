@@ -1,75 +1,47 @@
 ---
+import Icon from './atoms/Icon.astro';
 interface Props {}
-
-const {} = Astro.props;
 ---
 
-<div class="">
-    <div class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
-        <div class="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40">
-            <div class="px-6 lg:px-0 lg:pt-4">
-                <div class="mx-auto max-w-2xl">
-                    <div class="max-w-lg">
-                        <div class="mt-24 sm:mt-32 lg:mt-16">
-                            <a href="#" class="inline-flex space-x-6">
-                                <span class="rounded-full bg-black/80 px-3 py-1 text-sm font-semibold leading-6 text-white ring-1 ring-inset ring-black">What's new</span>
-                                <span class="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
-                                    <span>Github repo</span>
-                                    <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor"
-                                         aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                                              clip-rule="evenodd"/>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                        <h1 class="mt-10 text-4xl font-roboto tracking-tight text-gray-900 sm:text-6xl">
-                            Improve communication with your customers
-                        </h1>
-                        <p class="mt-6 text-lg text-gray-600">Anim aute id magna aliqua ad ad non deserunt
-                            sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-                            aliqua.</p>
-                        <div class="mt-10 flex items-center gap-x-6">
-                            <a href="#"
-                               class="rounded-md bg-white border border-black px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">
-                                Signup
-                            </a>
-                            <a href="https://github.com/eavinti/astro-landing" class="text-sm font-semibold leading-6 text-gray-900">Get the code<span
-                                    aria-hidden="true">→</span></a>
-                        </div>
-                    </div>
-                </div>
+<div class="pt-20 lg:pt-0">
+  <div
+    class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20"
+  >
+    <div
+      class="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-32 items-center"
+    >
+      <div class="px-6 lg:px-0 lg:pt-4">
+        <div class="mx-auto max-w-2xl">
+          <div class="max-w-lg">
+            <h1
+              class="mt-10 text-4xl font-roboto tracking-tight text-gray-900 sm:text-6xl"
+            >
+              Tu aliado a la hora de afrontar la transformación digital.
+            </h1>
+            <p class="mt-6 text-lg text-gray-600">
+              Construir el mejor equipo de profesionales que acompaña el
+              desarrollo, transformación y mejora de las empresas y de la
+              sociedad, a través de soluciones tecnológicas.
+            </p>
+            <div class="mt-10 flex items-center gap-x-6">
+              <a
+                href="#"
+                class="rounded-md bg-white border border-black px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-black hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              >
+                Conocer más
+              </a>
+              <a
+                href="/caso-de-estudios"
+                class="text-sm font-semibold leading-6 text-gray-900"
+                >Ver caso de análisis<span aria-hidden="true">→</span></a
+              >
             </div>
-
-            <div class="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen relative">
-                <img class="rounded-xl"
-                     src="./hero.png"/>
-                <div class="absolute top-0 right-0 rounded-bl-xl p-6 bg-gray-50">
-                    <svg class="h-2 w-2 inline fill-black mr-2" viewBox="0 0 6 6" aria-hidden="true">
-                        <circle cx="3" cy="3" r="3"/>
-                    </svg>
-                    <svg class="h-2 w-2 inline fill-gray-300 mr-2" viewBox="0 0 6 6" aria-hidden="true">
-                        <circle cx="3" cy="3" r="3"/>
-                    </svg>
-                    <svg class="h-2 w-2 inline fill-gray-300 mr-2" viewBox="0 0 6 6" aria-hidden="true">
-                        <circle cx="3" cy="3" r="3"/>
-                    </svg>
-                </div>
-
-                <div class="absolute bottom-0 right-0 rounded-full m-6 pl-1 pr-4 py-1 bg-black bg-opacity-75 flex items-center">
-                    <img class="inline mr-2 h-9 w-9 rounded-full"
-                         src="./avatar.jpeg"
-                         alt="">
-                    <div class="flex flex-col">
-                        <span class="text-white text-sm font-roboto">Edgar Alejandro</span>
-                        <span class="text-gray-200 text-xs font-nunito">Software developer</span>
-                    </div>
-                </div>
-
-            </div>
-
+          </div>
         </div>
-        <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
+      </div>
+      <div class="pt-12">
+        <Icon />
+      </div>
     </div>
+  </div>
 </div>
