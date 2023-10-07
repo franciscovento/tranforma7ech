@@ -1,0 +1,51 @@
+---
+import sochicImg from '../components/assets/sochic-banner.jpg';
+import Layout from './Layout.astro';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'Transforma7ech' } = Astro.props;
+---
+
+<Layout title={title}>
+  <div
+    style={`background-image: url(${sochicImg.src});`}
+    class="w-full h-[500px] bg-slate-600 bg-contain bg-center bg-no-repeat"
+  >
+  </div>
+  <div class="relative">
+    <nav class="sticky top-0 bg-white shadow-sm">
+      <ul class="flex items-center gap-4 justify-center max-w-7xl mx-auto px-8">
+        <li>
+          <a href="/caso-de-estudio/maysix-sochic"> Cliente</a>
+        </li>
+        <li>
+          <a href="/caso-de-estudio/maysix-sochic/arquitectura-empresarial"
+            >Arquitectura Empresarial</a
+          >
+        </li>
+        <li>
+          <a href="/caso-de-estudio/maysix-sochic/alcance-del-proyecto"
+            >Alcance del proyecto</a
+          >
+        </li>
+        <li>
+          <a href="/caso-de-estudio/maysix-sochic/seleccion-de-software"
+            >Selección de software</a
+          >
+        </li>
+        <li>
+          <a href="/caso-de-estudio/maysix-sochic/innovacion">Innovación</a>
+        </li>
+        <li>
+          <a href="/caso-de-estudio/maysix-sochic/conclusiones">Conclusiones</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="max-w-7xl mx-auto px-8">
+      <slot />
+    </div>
+  </div>
+</Layout>
