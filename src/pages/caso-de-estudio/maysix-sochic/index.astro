@@ -4,6 +4,17 @@ import maysix from '../../../components/assets/maysix.png';
 import sochic from '../../../components/assets/sochic.png';
 import mercado from '../../../components/assets/mercado.png';
 import shadow from '../../../components/assets/shadow.png';
+import ValuesSlider from '../../../components/ValuesSlider.tsx';
+import organigrama from '../../../components/assets/organigrama.png';
+import floresta from '../../../components/assets/floresta.png';
+import clothes6 from '../../../components/assets/clothes6.png';
+import maysixLogo from '../../../components/assets/maysix-logo.png';
+import sochicLogo from '../../../components/assets/sochic-logo.png';
+import woman1 from '../../../components/assets/woman1.png';
+import woman2 from '../../../components/assets/woman2.png';
+import woman3 from '../../../components/assets/woman3.png';
+import woman4 from '../../../components/assets/woman4.png';
+import woman5 from '../../../components/assets/woman5.png';
 ---
 
 <CaseLayout title="SOCHIC | MAYSIX">
@@ -64,7 +75,7 @@ import shadow from '../../../components/assets/shadow.png';
       <img class="w-full" src={mercado.src} alt="" />
     </div>
   </div>
-  <div class="web-banner py-12 bg-[#F2EAE2]">
+  <div class="web-banner pt-12 bg-[#F2EAE2] flex flex-col gap-20">
     <div class="web-container grid sm:grid-cols-6">
       <h2 class="sm:col-span-1 text-2xl text-tt-blue">
         Identidad Organizacional
@@ -148,6 +159,72 @@ import shadow from '../../../components/assets/shadow.png';
             </p>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="-mb-28">
+      <ValuesSlider client:visible />
+    </div>
+  </div>
+  <div class="w-full h-40 sm:h-60"></div>
+  <div class="web-banner relative">
+    <img class="absolute top-10" src={shadow.src} alt="" />
+    <div class="web-container grid sm:grid-cols-6 py-12">
+      <h2 class="sm:col-span-1 text-2xl text-tt-blue">Organigrama</h2>
+      <div class="sm:col-span-5">
+        <p class="text-tt-text font-extralight pb-8">
+          Tanto Maysix como Sochic se ubican en el barrio de Floresta, CABA. Por
+          el tipo de público propio del rubro en la zona, los clientes
+          presenciales suelen incluir locales de zonas aledañas al conurbano
+          bonaerense. La venta online tiene alcance a todo el país. Su trabajo
+          en conjunto a sus proveedores costureros hace que sus productos sean
+          de industria nacional.
+        </p>
+        <img class="w-full" src={organigrama.src} alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-6 py-12">
+    <h2 class="sm:col-span-1 text-2xl text-tt-blue">Localización</h2>
+    <div class="sm:col-span-5">
+      <p class="text-tt-text font-extralight pb-8">
+        Tanto Maysix como Sochic se ubican en el barrio de Floresta, CABA. Por
+        el tipo de público propio del rubro en la zona, los clientes
+        presenciales suelen incluir locales de zonas aledañas al conurbano
+        bonaerense. La venta online tiene alcance a todo el país. Su trabajo en
+        conjunto a sus proveedores costureros hace que sus productos sean de
+        industria nacional.
+      </p>
+      <img class="w-full" src={floresta.src} alt="" />
+    </div>
+  </div>
+
+  <div class="web-banner bg-primary">
+    <div class="web-container grid sm:grid-cols-6 pt-20">
+      <h2 class="sm:col-span-1 text-2xl">Productos y servicios</h2>
+      <div class="sm:col-span-5">
+        <p class="text-tt-text font-extralight pb-8">
+          Maysix trabaja con indumentaria femenina para chicas de entre 16 y 35
+          años, que buscan un look de noche / fiesta.
+          <br /><br />
+           Sochic también trabaja con indumentaria femenina para un público de
+          entre 16 y 35 años, pero enfocado en outfits para salidas casuales y
+          de día. Ambas marcas fabrican sus propios productos y diseños.
+        </p>
+      </div>
+    </div>
+    <div class="py-12 overflow-hidden flex flex-col gap-12">
+      <div class="flex gap-8 items-end justify-end">
+        <img src={maysixLogo.src} />
+        <img src={woman1.src} alt="" />
+        <img src={woman2.src} alt="" />
+        <img src={woman3.src} alt="" />
+      </div>
+      <div class="flex gap-8 items-end">
+        <img src={sochicLogo.src} />
+        <img src={woman4.src} alt="" />
+        <img src={woman5.src} alt="" />
+        <img src={clothes6.src} alt="" />
       </div>
     </div>
   </div>
