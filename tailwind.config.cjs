@@ -10,7 +10,9 @@ module.exports = {
 			},
 			colors: {
 				primary: '#f2c56a',
-				secondary: '#43466f'
+				secondary: '#43466f',
+				"tt-blue": '#868DF5',
+				'tt-text': '#111827'
 			}
 		},
 	},
