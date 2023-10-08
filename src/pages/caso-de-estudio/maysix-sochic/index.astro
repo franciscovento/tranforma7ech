@@ -19,8 +19,8 @@ import woman5 from '../../../components/assets/woman5.png';
 
 <CaseLayout title="SOCHIC | MAYSIX">
   <div class="py-20 flex flex-wrap relative">
-    <img class="relative z-10" src={sochic.src} />
-    <img class="absolute right-0 top-48" src={maysix.src} />
+    <img class="relative z-0 sm:z-10" src={sochic.src} />
+    <img class="absolute z-10 sm:z-0 right-0 top-48" src={maysix.src} />
   </div>
   <div class="web-banner">
     <img class="absolute top-10" src={shadow.src} alt="" />
@@ -166,6 +166,53 @@ import woman5 from '../../../components/assets/woman5.png';
     </div>
   </div>
   <div class="w-full h-40 sm:h-60"></div>
+
+  <div class="grid sm:grid-cols-6 py-12">
+    <h2 class="sm:col-span-1 text-2xl text-tt-blue">Objetivos Estratégicos</h2>
+    <div class="sm:col-span-5">
+      <ul
+        class="text-tt-text font-extralight pb-8 list-disc ml-5 flex flex-col gap-4"
+      >
+        <li>
+          Implementar programas de <strong class="bg-[#e5f77d]"
+            >fidelización de clientes</strong
+          > mayoristas para el segundo Q de 2024. La idea del programa es
+          mantener a los clientes mayoristas más importantes a la vez quieren
+          incorporar nuevos clientes mayoristas. Incrementar un 20% de las
+          compras totales mensuales por clientes.
+        </li>
+        <li>
+          <strong class="bg-[#e5f77d]"> Reducir costos</strong> en un 10% por
+          encima de la inflación para octubre 2024.
+        </li>
+        <li>
+          Aumentar ventas en un 15% por encima de la inflación para <strong
+            class="bg-[#e5f77d]">maximizar ganancias</strong
+          > a octubre 2024.
+        </li>
+        <li>
+          Bajar los precios a un 5 o 10%. Quieren <strong class="bg-[#e5f77d]"
+            >bajar los precios</strong
+          > bajando el porcentaje de ganancia, ya que sus precios son más altos
+          al lado de sus competidores.
+        </li>
+        <li>
+          Abrir como mínimo una <strong class="bg-[#e5f77d]"
+            >nueva sucursal</strong
+          > en la zona actual de Avellaneda para expandir su negocio para el año
+          2027. Es un objetivo a largo plazo, tienen la ambición y la
+          experiencia, pero depende mucho de la situación económica del país y
+          que los primeros objetivos se cumplan para 2027.
+        </li>
+        <li>
+          Integrar las distintas bases de datos de los sistemas y así poder
+          <strong class="bg-[#e5f77d]">controlar los stocks</strong>. Se mide
+          comparando el stock lógico vs el stock físico. Este objetivo es
+          medible, alcanzable y relevante, para el primer Q 2024.
+        </li>
+      </ul>
+    </div>
+  </div>
   <div class="web-banner relative">
     <img class="absolute top-10" src={shadow.src} alt="" />
     <div class="web-container grid sm:grid-cols-6 py-12">

@@ -81,10 +81,12 @@ const ValuesSlider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="text-tt-text h-[300px] bg-[#D1D4FB] p-8 rounded-2xl  flex flex-col justify-evenly items-center ">
-            <h2 className="text-2xl font-medium text-center">Otra cosa</h2>
+            <h2 className="text-2xl font-medium text-center">
+              Pasión por la moda
+            </h2>
             <p className="text-sm font-extralight">
-              Fomentamos un ambiente de trabajo colaborativo donde cada miembro
-              del equipo tiene voz y contribuye al éxito de la empresa.
+              Amamos la moda y estamos apasionados por ayudar a las mujeres a
+              sentirse seguras y hermosas a través de nuestras prendas.
             </p>
           </div>
         </SwiperSlide>
