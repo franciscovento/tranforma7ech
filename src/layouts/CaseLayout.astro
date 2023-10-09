@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 import Logo from '../components/atoms/Logo.astro';
+import StudyCaseNav from '../components/molecules/StudyCaseNav.astro';
 
 interface Props {
   title?: string;
@@ -115,22 +116,7 @@ const nav = [
           </div>
         </div>
       </div>
-      <nav class="hidden lg:block max-w-5xl mx-auto">
-        <ul class="grid grid-cols-6 gap-4">
-          {
-            nav.map((item) => (
-              <li>
-                <a
-                  class="text-sm bg-secondary hover:bg-primary duration-500 hover:text-secondary text-white rounded-md py-3 px-6 min-w-full inline-block text-center"
-                  href={item.href}
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
+      <StudyCaseNav />
     </header>
     <main class="max-w-5xl px-8 mx-auto">
       <slot />

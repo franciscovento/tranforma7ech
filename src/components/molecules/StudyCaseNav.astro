@@ -1,0 +1,52 @@
+---
+const nav = [
+  {
+    name: 'Perfil',
+    href: '/caso-de-estudio/maysix-sochic',
+  },
+  {
+    name: 'Arquitectura',
+    href: '/caso-de-estudio/maysix-sochic/arquitectura-empresarial',
+  },
+  {
+    name: 'Alcance',
+    href: '/caso-de-estudio/maysix-sochic/alcance-del-proyecto',
+  },
+  {
+    name: 'Software',
+    href: '/caso-de-estudio/maysix-sochic/seleccion-de-software',
+  },
+  {
+    name: 'Innovación',
+    href: '/caso-de-estudio/maysix-sochic/innovacion',
+  },
+  {
+    name: 'Conclusión',
+    href: '/caso-de-estudio/maysix-sochic/conclusiones',
+  },
+];
+
+const { pathname } = Astro.url;
+---
+
+<nav class="hidden lg:block max-w-5xl mx-auto">
+  <ul class="grid grid-cols-6 gap-4">
+    {
+      nav.map((item) => (
+        <li>
+          <a
+            class:list={[
+              {
+                '!bg-primary !text-secondary': pathname === item.href,
+              },
+            ]}
+            class="text-sm bg-secondary hover:bg-primary duration-500 hover:text-secondary text-white rounded-md py-3 px-6 min-w-full inline-block text-center"
+            href={item.href}
+          >
+            {item.name}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
