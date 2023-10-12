@@ -1,5 +1,48 @@
 ---
+import fran from '../assets/fran.jpg';
+import gonza from '../assets/gonza.jpg';
+import luis from '../assets/luis.jpg';
+import nico from '../assets/nico.jpg';
+import yami from '../assets/yami.jpg';
+import fran2 from '../assets/fran2.jpeg';
 
+const team = [
+  {
+    image: fran.src,
+    name: 'Francisco Barrionuevo',
+    position: 'Teach Lead',
+  },
+  {
+    image: gonza.src,
+    name: 'Gonzalo Szame',
+    position: 'Product Analyst',
+  },
+  {
+    image: luis.src,
+    name: 'Luis González',
+    position: 'Product Analyst',
+  },
+  {
+    image: nico.src,
+    name: 'Héctor N. Caffarini',
+    position: 'SCRUM Master',
+  },
+  {
+    image: yami.src,
+    name: 'Yamila Arribas',
+    position: 'UI Designer',
+  },
+  {
+    image: fran2.src,
+    name: 'Francisco Vento',
+    position: 'Product Analyst',
+  },
+  {
+    image: '',
+    name: 'Karla Kim',
+    position: 'Product Owner',
+  },
+];
 ---
 
 <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-12">
@@ -11,14 +54,17 @@
       Nos esforzamos por superar las expectativas en cada tarea que emprendemos.
     </p>
   </div>
-  <div
-    class="grid grid-cols-2 sm:grid-cols-3 gap-8 items-center justify-items-center py-12 place-content-center"
-  >
-    <span class="block w-32 h-32 rounded-full bg-slate-600"></span>
-    <span class="block w-32 h-32 rounded-full bg-slate-600"></span>
-    <span class="block w-32 h-32 rounded-full bg-slate-600"></span>
-    <span class="block w-32 h-32 rounded-full bg-slate-600"></span>
-    <span class="block w-32 h-32 rounded-full bg-slate-600"></span>
-    <span class="block w-32 h-32 rounded-full bg-slate-600"></span>
+  <div class="flex items-center justify-center gap-8 py-12 flex-wrap">
+    {
+      team.map((item) => (
+        <div class="flex flex-col items-center gap-4">
+          <img src={item.image} class="w-32 h-32 rounded-full bg-slate-600" />
+          <div class="flex flex-col items-center justify-center">
+            {item.name}
+            <span class="text-xs text-tt-text">{item.position}</span>
+          </div>
+        </div>
+      ))
+    }
   </div>
 </div>
