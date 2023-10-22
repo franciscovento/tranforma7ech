@@ -1,9 +1,171 @@
 ---
 import CaseLayout from '../../../layouts/CaseLayout.astro';
+import arquitecturas from '../../../data/arquitecturas';
+import ArquitecturaSlider from '../../../components/ArquitecturaSlider';
 ---
 
 <CaseLayout>
-  <div class="py-12">
-    <h3>Esta página está en construcción...</h3>
+  <p class="py-12">
+    El desarrollo de la <strong>Arquitectura Empresarial (AE)</strong> de una
+    organización contribuye al cumplimiento de los objetivos estratégicos
+    mientras que garantiza que las iniciativas planteadas correspondan a
+    programas y proyectos que den solución a los requerimientos y necesidades de
+    negocio.
+    <br /><br />
+     ​ Utilizaremos el framework desarrollado por TOGAF (The Open Group
+    Architecture Framework), que propone definir la AE en cuatro dominios
+  </p>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    {
+      arquitecturas.map((arq) => {
+        return (
+          <div class="border border-secondary rounded-2xl p-8 flex flex-col gap-4">
+            <h3 class="text-xl text-secondary font-medium">{arq.title}</h3>
+            <p class="text-sm">{arq.content}</p>
+          </div>
+        );
+      })
+    }
+  </div>
+  <div class="w-full h-16"></div>
+  <h2 class="text-center text-2xl text-tt-blue font-semibold uppercase">
+    Arquitectura de Negocios
+  </h2>
+  <div class="grid sm:grid-cols-6 py-12">
+    <h2 class="sm:col-span-1 text-2xl text-tt-blue">Mapa de Procesos</h2>
+    <div class="sm:col-span-5">
+      <img class="w-full" src={'/procesos-actual.png'} alt="" />
+      <div class="py-5">
+        <button
+          class="bg-tt-blue-2 text-white py-2 px-8 rounded-md text-sm font-light flex items-end gap-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M14 3V7C14 7.26522 14.1054 7.51957 14.2929 7.70711C14.4804 7.89464 14.7348 8 15 8H19"
+              stroke="white"
+              stroke-width="0.941176"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M12 17V11M17 21H7C6.46957 21 5.96086 20.7893 5.58579 20.4142C5.21071 20.0391 5 19.5304 5 19V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H14L19 8V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21Z"
+              stroke="white"
+              stroke-width="0.941176"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M9.5 14.5L12 17L14.5 14.5"
+              stroke="white"
+              stroke-width="0.941176"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+           Descargar esquema
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="web-banner py-12 bg-[#F2EAE2] flex flex-col gap-20">
+    <ArquitecturaSlider client:load />
+  </div>
+
+  <div class="w-full h-16"></div>
+  <h2 class="text-center text-2xl text-tt-blue font-semibold uppercase">
+    Arquitectura Destino
+  </h2>
+  <img class="py-12" src="/arquitectura-destino.png" />
+  <div class="grid sm:grid-cols-6 py-12">
+    <h2 class="sm:col-span-1 text-2xl text-tt-blue">Estratégicos</h2>
+    <div class="sm:col-span-5">
+      <p class="text-tt-text font-extralight">
+        <strong> Fidelización e incorporación de clientes:</strong> La
+        adquisición y retención clientes son aspectos cruciales sobrevivir en el
+        contexto altamente competitivo de nuestro cliente. Por eso, sugerimos
+        implementar un proceso formal de diseño estratégico de fidelización e
+        incorporación de clientes, para fortalecer las relaciones comerciales,
+        la posición en el mercado, y la sostenibilidad a largo plazo de la
+        compañía.
+        <br /><br />
+        <strong>Toma de decisiones basadas en datos:</strong> En la nueva
+        arquitectura al contar con información integrada y más certera, se
+        facilitaría el armado de un proceso para la toma de decisiones con
+        información consolidada.
+      </p>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-6">
+    <h2 class="sm:col-span-1 text-2xl text-tt-blue">Operativos</h2>
+    <div class="sm:col-span-5">
+      <p class="text-tt-text font-extralight">
+        <strong> Gestion de venta online:</strong> Hoy en día los pedidos que
+        reciben por WhatsApp los anotan en un archivo en Word y lo imprimen. En
+        ningún momento pasa por Woocommerce, entonces eso afecta en los
+        registros de las ventas y en el decremento de stock. Entonces el cambio
+        seria que la vendedora en vez que anotar el pedido en un archivo aparte,
+        registrar el pedido a través de la web.
+        <br /><br />
+        <strong> Gestión de stock centralizado:</strong>Proceso donde se podrá
+        acceder a la informacion del stock tanto online como físico
+        correspondiente a cada marca.
+        <br /><br />
+        <strong>Posventa:</strong>Junto a la necesidad de fidelizar clientes,
+        sugerimos diseñar e incorporar como parte del proceso operativo un
+        proceso específico de soporte post-venta.
+      </p>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-6 py-12">
+    <h2 class="sm:col-span-1 text-2xl text-tt-blue">Soporte</h2>
+    <div class="sm:col-span-5">
+      <p class="text-tt-text font-extralight">
+        <strong>Gestión de calidad:</strong> Proceso para obtener información
+        detallada de qué fallas se encontraron en las prendas y en qué estapa
+        del proceso de confección se ocacionaron.
+        <br />
+        <br />
+        <strong> Gestión de recursos tecnológicos:</strong>
+        <br />
+        <br />
+        <strong> Análisis de datos y resultados:</strong>
+      </p>
+    </div>
+  </div>
+  <div class="flex items-center justify-center pb-12">
+    <button
+      class="bg-tt-blue-2 text-white py-2 px-8 rounded-md text-sm font-light flex items-center gap-2"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <path
+          d="M14 3V7C14 7.26522 14.1054 7.51957 14.2929 7.70711C14.4804 7.89464 14.7348 8 15 8H19"
+          stroke="white"
+          stroke-width="0.941176"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M12 17V11M17 21H7C6.46957 21 5.96086 20.7893 5.58579 20.4142C5.21071 20.0391 5 19.5304 5 19V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H14L19 8V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21Z"
+          stroke="white"
+          stroke-width="0.941176"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M9.5 14.5L12 17L14.5 14.5"
+          stroke="white"
+          stroke-width="0.941176"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+       Descargar análisis detallado
+    </button>
   </div>
 </CaseLayout>
