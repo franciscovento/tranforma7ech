@@ -1,0 +1,55 @@
+---
+interface Props {
+  columns: string[];
+  rows: string[][];
+  explication?: string[];
+}
+
+const { columns: headers, rows, explication } = Astro.props;
+---
+
+<div class="overflow-x-auto web-banner bg-tt-beige px-4">
+  <table
+    class="w-full min-w-[1024px] max-w-[1024px] mx-auto border-collapse bg-transparent"
+  >
+    <thead class="bg-tt-blue-2 text-white text-xs">
+      <tr>
+        {
+          headers?.map((head) => {
+            return <th class="text-left p-4">{head}</th>;
+          })
+        }
+      </tr>
+    </thead>
+    <tbody>
+      {
+        explication && (
+          <tr class="bg-[#43467199]/60 text-white italic ">
+            {explication.map((cell) => {
+              return <td class="p-4 text-sm">{cell}</td>;
+            })}
+          </tr>
+        )
+      }
+      {
+        rows?.map((row, index) => {
+          return (
+            <tr
+              class:list={[
+                'border-b-8 border-tt-beige',
+                {
+                  'bg-[#FAF7F3]': index % 2 === 0,
+                  'bg-white': index % 2 === 1,
+                },
+              ]}
+            >
+              {row?.map((cell) => {
+                return <td class="p-4 text-sm">{cell}</td>;
+              })}
+            </tr>
+          );
+        })
+      }
+    </tbody>
+  </table>
+</div>

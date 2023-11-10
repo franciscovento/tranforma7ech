@@ -1,9 +1,224 @@
 ---
+import AppTable from '../../../components/AppTable.astro';
+import HighlightedText from '../../../components/HighlightedText.astro';
+import TitleBlue from '../../../components/TitleBlue.astro';
 import CaseLayout from '../../../layouts/CaseLayout.astro';
+
+const softwares = [
+  {
+    logo: '/woo.png',
+    url: 'https://woo.com/',
+  },
+  {
+    logo: '/domo.png',
+    url: 'https://www.domo.com/',
+  },
+  {
+    logo: '/vtex.png',
+    url: 'https://vtex.com',
+  },
+  {
+    logo: '/shopify.png',
+    url: 'https://www.shopify.com/',
+  },
+];
 ---
 
 <CaseLayout>
-  <div class="py-12">
-    <h3>Esta página está en construcción...</h3>
+  <div class="w-full h-8"></div>
+  <p class="py-12">
+    Habiendo realizado un estudio de los objetivos estratégicos, funcionalidades
+    y aspectos críticos para el caso, podremos avanzar con el análisis del
+    mercado en la búsqueda de proveedores que podrían brindar la mejor solución
+    posible para satisfacer las necesidades del caso.
+    <br /><br />
+     Para determinar cuantitativa y cualitativamente la mejor solución a
+    proponer al cliente, se propone utilizar una metodología clara y exhaustiva
+    basada en RFI y RFP:
+  </p>
+  <div class="grid sm:grid-cols-8 pb-12 gap-4">
+    <h2 class="sm:col-span-2 text-2xl text-tt-blue">
+      Request for information (RFI)
+    </h2>
+    <div class="sm:col-span-6">
+      <p class="text-tt-text text-xl font-normal pb-8">
+        El RFI es un documento que elaboramos en base a un estudio de mercado y
+        con el objetivo de r​ealizar una preselección y recopilar información
+        sobre los posibles proveedores para el proyecto. Dicho análisis está
+        basado en 4 dimensiones: proveedor (antecedentes), económica, técnica y
+        funcional.
+      </p>
+    </div>
+  </div>
+  <div class="w-full h-12"></div>
+  <div class="web-banner bg-tt-beige">
+    <div class="web-container flex flex-col items-center justify-center gap-8">
+      <div class="w-full h-12"></div>
+      <h3
+        class="uppercase text-tt-blue text-2xl font-bold flex flex-col items-center justify-center gap-4 text-center"
+      >
+        Análisis de mercado
+      </h3>
+      <p>
+        En la siguiente tabla se lista un conjunto de criterios para la
+        evaluación de soluciones.
+      </p>
+      <AppTable
+        columns={[
+          'Aspecto a evaluar',
+          'Ponderación',
+          'Descripción',
+          'Justificación',
+        ]}
+        explication={[
+          'Nombre del aspecto a evaluar. Por ejemplo: Proveedor',
+          'Porcentaje de importancia del aspecto dentro de este nivel de selección.',
+          'En qué consiste la evaluación. Por ejemplo: La evaluación del proveedor abarca aquellos aspectos relacionados a la madurez de la empresa oferente, servicios que otorga en el marco del proyecto/producto, la experiencia que posee resolviendo problemáticas en industrias similares a la del caso de estudio, etc.',
+          'Por qué se consideró este aspecto y por qué se le otorgó ese grado de ponderación. Por ejemplo: Es importante para el cliente establecer un vínculo comercial con una empresa confiable que le asegure el soporte constante de sus operaciones, ya que, al no poseer un departamento de TI, el riesgo de la operación va a estar trasladado al proveedor, etc.',
+        ]}
+        rows={[
+          [
+            'Proveedor',
+            '35%',
+            'Se evaluará la presencia a nivel nacional, que tenga experiencia implementando esta solución en la industria textil, dando mayor valor a aquellos proveedores que lo hayan implementado en comercios de la zona de avellaneda o estén familiarizados con la comunidad coreana. También se tendrá en cuenta que el proveedor brinde capacitaciones al personal respecto de la solución adquirida, el tipo de capacitación y las condiciones bajo las que se brindan las mismas. Se tendrán en cuenta los tiempos de entrega e implementación y el soporte brindado post adquisición.',
+            'La empresa pertenece a una comunidad cerrada y si bien tienen aspiraciones de progreso y buscar la mejor solución disponible en el mercado, sus dueños priorizan conocer al proveedor y la confianza que el mismo les genera. Dado que el personal presenta ciertas dificultades para adaptarse a las nuevas tecnologías, es necesario que el proveedor brinde capacitaciones y que las mismas se adapten a las necesidades de la empresa. Dado que se tiene la necesidad inmediata de aumentar ganancias, es necesario evaluar los tiempos necesarios para implementar la solución para que la misma pueda impactar rápidamente en el objetivo buscado. Además, al no tener la empresa un departamento de TI, es necesario que el proveedor brinde soporte constante e inmediato en la operatoria diaria.',
+          ],
+          [
+            'Funcional',
+            '20%',
+            'Se evaluará que la solución cumpla con las funcionalidades mínimas necesarias, que su interfaz de usuario sea amigable y fácil de utilizar.',
+            'Las funcionalidades solicitadas en la solución son las que dan origen al proyecto, por lo que es fundamental que la solución a seleccionar cumpla con las funcionalidades mínimas requeridas. Además, es importante que la misma presente una interfaz amigable e intuitiva para facilitar la adaptación y adopción del sistema por parte del personal.',
+          ],
+          [
+            'Técnico',
+            '15%',
+            'Se evaluará la compatibilidad de la solución con WordPress, la infraestructura requerida por la misma y los aspectos de seguridad.',
+            'Este aspecto posee la menor ponderación, ya que a pesar de que es importante que el nuevo sistema se pueda adaptar a la infraestructura actual, el cliente considera más relevantes los otros aspectos.',
+          ],
+          [
+            'Económico',
+            '30%',
+            'Se priorizará la propuesta más económica teniendo en cuenta las facilidades de pago y financiamiento, moneda en la que se deben realizar los mismos y el monto total de la inversión necesaria (incluyendo los costos de la capacitación al personal).',
+            'Este aspecto tiene una ponderación alta dado que la empresa tiene gran parte de su presupuesto comprometido en garantizar la continuidad del negocio para octubre 2024, por lo que los recursos con los que dispone para este proyecto son limitados y la viabilidad del proyecto depende significativamente de que la empresa pueda cubrir estos costos.A esto se adiciona la situación económica del país, la elección presidencial y el contexto de incertidumbre que esto conlleva.',
+          ],
+        ]}
+      />
+      <div class="w-full h-12"></div>
+    </div>
+  </div>
+  <div class="w-full h-12"></div>
+  <div class="flex flex-col gap-4 pt-12">
+    <TitleBlue>Proveedores</TitleBlue>
+    <p class="pb-12">
+      Se analizaron inicialmente 8 proveedores que ofrecen el servicio para el
+      software ERP, CRM y BI (o integraciones con apps CRM, BI) en la nube. Cada
+      uno de ellos con diferentes particularidades fuimos filtrándolos en base
+      tanto a lo visto en los respectivos sitios web como en diferentes
+      calificaciones halladas en internet. De las empresas iniciales, hicimos
+      foco en 4 potenciales candidatos:
+    </p>
+  </div>
+
+  <div
+    class="grid sm:grid-cols-2 md:grid-cols-4 items-baseline gap-8 pt-4 pb-12"
+  >
+    {
+      softwares.map((item) => {
+        return (
+          <div class="">
+            <img
+              style="mix-blend-mode:multiply"
+              class="mx-auto pb-4 aspect-video"
+              src={item.logo}
+              alt=""
+            />
+            <a
+              class="flex items-center gap-4 border border-[#A8A8A8] rounded-full p-2"
+              href={item.url}
+              target="_blank"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M16.36 14C16.44 13.34 16.5 12.68 16.5 12C16.5 11.32 16.44 10.66 16.36 10H19.74C19.9 10.64 20 11.31 20 12C20 12.69 19.9 13.36 19.74 14M14.59 19.56C15.19 18.45 15.65 17.25 15.97 16H18.92C17.9512 17.6683 16.4141 18.932 14.59 19.56ZM14.34 14H9.66C9.56 13.34 9.5 12.68 9.5 12C9.5 11.32 9.56 10.65 9.66 10H14.34C14.43 10.65 14.5 11.32 14.5 12C14.5 12.68 14.43 13.34 14.34 14ZM12 19.96C11.17 18.76 10.5 17.43 10.09 16H13.91C13.5 17.43 12.83 18.76 12 19.96ZM8 8H5.08C6.03886 6.32721 7.5748 5.06149 9.4 4.44C8.8 5.55 8.35 6.75 8 8ZM5.08 16H8C8.35 17.25 8.8 18.45 9.4 19.56C7.57862 18.9317 6.04485 17.6677 5.08 16ZM4.26 14C4.1 13.36 4 12.69 4 12C4 11.31 4.1 10.64 4.26 10H7.64C7.56 10.66 7.5 11.32 7.5 12C7.5 12.68 7.56 13.34 7.64 14M12 4.03C12.83 5.23 13.5 6.57 13.91 8H10.09C10.5 6.57 11.17 5.23 12 4.03ZM18.92 8H15.97C15.657 6.76146 15.1936 5.5659 14.59 4.44C16.43 5.07 17.96 6.34 18.92 8ZM12 2C6.47 2 2 6.5 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2Z"
+                  fill="black"
+                />
+              </svg>
+              <span>https://wwww</span>
+            </a>
+          </div>
+        );
+      })
+    }
+  </div>
+  <div class="flex justify-center pb-8">
+    <a
+      class="bg-tt-blue-2 text-white py-2 px-8 rounded-md text-sm font-light flex items-end gap-2 w-fit"
+      download="arquitectura_negocios_maysix.jpg"
+      href={'/escenarios.png'}
+      target="_blank"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <path
+          d="M14 3V7C14 7.26522 14.1054 7.51957 14.2929 7.70711C14.4804 7.89464 14.7348 8 15 8H19"
+          stroke="white"
+          stroke-width="0.941176"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M12 17V11M17 21H7C6.46957 21 5.96086 20.7893 5.58579 20.4142C5.21071 20.0391 5 19.5304 5 19V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H14L19 8V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21Z"
+          stroke="white"
+          stroke-width="0.941176"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M9.5 14.5L12 17L14.5 14.5"
+          stroke="white"
+          stroke-width="0.941176"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+       Descargar esquema
+    </a>
+  </div>
+  <div class="grid md:grid-cols-8 py-12 gap-4">
+    <h2 class="sm:col-span-2 text-2xl text-tt-blue">
+      Proveedores pre-seleccionados
+    </h2>
+    <div class="md:col-span-6">
+      <p class="text-tt-text font-extralight pb-8">
+        Para nuestro cliente, la solución ideal debe ser de bajo coste de
+        entrada, modular y altamente intuitiva para minimizar la curva de
+        aprendizaje, lo que facilitará la adopción por parte de los empleados.
+        Además, es esencial que el proveedor esté al tanto de la situación
+        económica del país, considerando los desafíos de la inflación en la
+        gestión.
+        <br /><br />
+         Habiendo considerado estas necesidades, hemos preseleccionado dos
+        proveedores: <HighlightedText>WooCommerce y DOMO</HighlightedText> .
+        WooCommerce es una opción atractiva debido a su integración fluida con
+        WordPress, la plataforma en la que se basa la tienda online de la
+        empresa. Es gratuito y de código abierto, lo que lo hace una opción de
+        bajo coste. Por otro lado, DOMO es una elección sólida, ya que el
+        cliente ya lo utiliza y el personal está familiarizado con su interfaz.
+        Como una empresa argentina, DOMO comprende las complejidades económicas
+        locales y ofrece soporte adaptado a estas circunstancias. Además, la
+        relación de confianza establecida con DOMO facilitaría cualquier
+        desarrollo a medida o requisitos específicos que surjan en el futuro.
+        Estas dos opciones ofrecen soluciones sólidas para satisfacer las
+        necesidades y prioridades de nuestro cliente.
+      </p>
+    </div>
   </div>
 </CaseLayout>
