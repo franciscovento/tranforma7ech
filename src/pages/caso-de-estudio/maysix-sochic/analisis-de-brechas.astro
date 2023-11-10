@@ -1,4 +1,6 @@
 ---
+import AppTable from '../../../components/AppTable.astro';
+import HighlightedText from '../../../components/HighlightedText.astro';
 import MatricesSlider from '../../../components/MatricesSlider';
 import CaseLayout from '../../../layouts/CaseLayout.astro';
 ---
@@ -8,22 +10,27 @@ import CaseLayout from '../../../layouts/CaseLayout.astro';
   <p class="py-12">
     El análisis de brechas es un proceso que identifica las diferencias entre el
     estado actual de una organización y su estado deseado. Ayuda a determinar
-    qué cambios y acciones son necesarios para alcanzar los objetivos
-    establecidos, al analizar las deficiencias y las áreas que requieren
+    <strong
+      >qué cambios y acciones son necesarios para alcanzar los objetivos</strong
+    >
+     establecidos, al analizar las deficiencias y las áreas que requieren
     mejoras. Este enfoque es fundamental para la planificación estratégica y la
     toma de decisiones informadas en una organización.
     <br /><br />
-     Aquí es donde aparece el concepto de “bloque de construcción” que
-    representa un componente (potencialmente reutilizable) de negocios, de
+     Aquí es donde aparece el concepto de <strong
+      >“bloque de construcción”</strong
+    > que representa un componente (potencialmente reutilizable) de negocios, de
     tecnología, de información o una capacidad que puede ser combinada con otros
     bloques de construcción para entregar arquitecturas y soluciones (parte de
     un proceso de negocio, interfaces, funcionalidades, subsistemas,
     plataformas, interoperabilidad, etc.) Cuando se diseña la Arquitectura
-    destino, se establecen “bloques de solución”, necesarios para el nuevo
-    modelo, de los cuales se establece “cuáles” son los bloques de construcción
-    de la arquitectura de origen que pueden ser reutilizados.
+    destino, se establecen <strong>“bloques de solución”</strong>, necesarios
+    para el nuevo modelo, de los cuales se establece “cuáles” son los bloques de
+    construcción de la arquitectura de origen que pueden ser reutilizados.
   </p>
-  <div class="web-banner py-12 bg-[#F2EAE2] flex flex-col gap-20">
+  <div
+    class="web-banner py-12 bg-[#F2EAE2] flex flex-col gap-20 overflow-x-scroll"
+  >
     <MatricesSlider client:load />
   </div>
   <div class="w-full h-8"></div>
@@ -32,16 +39,17 @@ import CaseLayout from '../../../layouts/CaseLayout.astro';
       Analisis de Brechas
     </h2>
     <p class="pt-6">
-      Del listado de ABB identificados seleccionamos como candidatos los
-      listados aquí abajo, tomando como base principal un alcance enfocado en la
-      satisfacción del cliente y los procesos internos. Consideramos que la
-      empresa tiene varios ítems a mejorar, entre ellos lo que tiene que ver con
-      el seguimiento de stock de sus productos. Para esto, vamos a crear una
-      solución de stock centralizado, que nos ayudará en el avance de tres
-      objetivos estratégicos: <strong class="bg-[#e5f77d]">
-        controlar los stocks, bajar los precios a un 5 o 10 % y la fidelización
-        de los clientes.
-      </strong>
+      Del listado de ABBs (bloques de construcción) identificados, hemos
+      seleccionado como candidatos los enlistados a continuación, basándonos
+      principalmente en un alcance enfocado en la satisfacción del cliente y los
+      procesos internos. Identificamos varios aspectos que la empresa debe
+      mejorar, especialmente en lo que respecta al seguimiento del stock de sus
+      productos. Con este fin, proponemos la implementación de una solución de
+      stock centralizado que contribuirá al logro de tres objetivos
+      estratégicos: <HighlightedText>
+        mejorar el control de los stocks, reducir los precios en un 5 o 10 % y
+        fortalecer la fidelización de los clientes.
+      </HighlightedText>
     </p>
   </div>
   <div
@@ -69,13 +77,13 @@ import CaseLayout from '../../../layouts/CaseLayout.astro';
       <div class="card-back bg-[#FBDCA0]">
         <div class="p-4">
           <p class="text-base">
-            La gestión de stock actual funciona de forma descentralizada ya que
-            la vendedora online tiene accesos a un determinado stock y los
-            vendedores presenciales tienen acceso a otro stock que no se
-            correlaciona con el primero ni con el del resto de los locales. Esto
-            genera que a veces sobre stock en alguna de las partes y falte en
-            otra y viceversa, generando así que se tengan que vender en oferta
-            productos que se podrían haber vendido a precio de lista.
+            La gestión de stock actual opera de manera descentralizada, ya que
+            la vendedora online y los vendedores presenciales acceden a
+            inventarios separados, sin correlación entre ellos ni con los demás
+            locales. Esta descentralización conduce a situaciones donde puede
+            haber excedente de stock en una área y escasez en otra, generando la
+            necesidad de ofrecer productos en oferta que podrían haberse vendido
+            a precio de lista.
           </p>
         </div>
       </div>
@@ -108,10 +116,10 @@ import CaseLayout from '../../../layouts/CaseLayout.astro';
       <div class="card-back bg-[#F3FFAB]">
         <div class="p-4">
           <p class="text-base font-extralight">
-            Para integrar el stock se necesita implementar una base de datos que
-            se conecte al sistema de gestión de stock centralizada,
-            alimentándose de este. Por lo cual también se incluye este bloque en
-            el proyecto.
+            Para lograr la integración del stock, es necesario implementar una
+            base de datos que se conecte al sistema centralizado de gestión de
+            stock, obteniendo información de este último. En consecuencia, este
+            bloque también se incorpora como parte integral del proyecto.
           </p>
         </div>
       </div>
@@ -141,9 +149,13 @@ import CaseLayout from '../../../layouts/CaseLayout.astro';
       <div class="card-back bg-[#FFDCCD]">
         <div class="p-4">
           <p class="text-base font-extralight">
-            Se incorpora un servidor cloud por la cual las distintas sucursales
-            podrán conectarse a la información del stock y ventas de las
-            tiendas.
+            Se introduce un servidor en la nube como componente clave del
+            sistema, brindando la capacidad para que las distintas sucursales
+            establezcan conexión y accedan de manera eficiente a la información
+            detallada sobre el stock y las ventas de cada tienda. Este enfoque
+            centralizado facilita la coordinación y el intercambio de datos en
+            tiempo real entre las sucursales, mejorando la eficiencia operativa
+            y permitiendo una toma de decisiones más informada y oportuna.
           </p>
         </div>
       </div>
@@ -158,16 +170,30 @@ import CaseLayout from '../../../layouts/CaseLayout.astro';
         </h2>
         <div class="flex flex-col gap-4">
           <p class="pt-6">
-            Se seleccions el escenario 4 – <strong class="bg-[#e5f77d]"
-              >Saas y modular</strong
-            >. Entendiendo que el presupuesto de nuestro cliente ya se encuentra
-            comprometido como para afrontar una instalación y mantenimiento
-            on-premise, se opta por una solución SaaS por tener menor costo de
-            ingreso. Además, se opta por una implementación modular, para
-            presentar una menor curva de aprendizaje a los empleados y suavizar
-            la resistencia generalizada al cambio. Por otro lado, la
-            organización no cuenta con personal técnico especializado para
-            implementar una solución on premise.
+            Se ha seleccionado el escenario 4 - <HighlightedText>
+              SaaS y modular
+            </HighlightedText>. Esta elección se fundamenta en la situación
+            financiera actual del cliente, donde el presupuesto ya está
+            comprometido y no permite afrontar los costos asociados a una
+            instalación y mantenimiento on-premise. La opción por una solución
+            SaaS se basa en su menor costo de entrada, permitiendo una
+            implementación más viable dentro de los límites presupuestarios
+            existentes.
+            <br /><br />
+             Además, se ha optado por una implementación modular para abordar la
+            menor curva de aprendizaje por parte de los empleados y suavizar la
+            resistencia generalizada al cambio. Esta estrategia modular
+            posibilita la introducción de componentes de la solución de manera
+            gradual, facilitando la adaptación y la incorporación de nuevas
+            funcionalidades sin generar una interrupción significativa en las
+            operaciones diarias.
+            <br /><br />
+             Un factor adicional es que la organización carece de personal
+            técnico especializado para llevar a cabo la implementación de una
+            solución on-premise, reforzando la elección de una solución SaaS que
+            reduce la dependencia de recursos técnicos internos. Este enfoque
+            busca maximizar la eficiencia en la implementación y asegurar una
+            transición sin contratiempos hacia la nueva solución.
           </p>
           <a
             class="bg-tt-blue-2 text-white py-2 px-8 rounded-md text-sm font-light flex items-end gap-2 w-fit"
@@ -205,7 +231,31 @@ import CaseLayout from '../../../layouts/CaseLayout.astro';
           </a>
         </div>
       </div>
-      <img src="/escenarios.png" alt="escenarios" class="w-full mx-auto" />
+      <AppTable
+        columns={['Escenario', 'Fortalezas', 'Debilidades']}
+        rows={[
+          [
+            'On premise y Big bang',
+            'Al implementar un sistema on-premise con un enfoque Big Bang, la empresa tiene un control absoluto sobre su infraestructura y software desde el principio. Esto significa que pueden adaptar, personalizar y asegurar el sistema según sus necesidades exactas sin depender de terceros. Además, al realizar la transición de una sola vez, la empresa puede tener una visión y gestión unificada del sistema, sin lidiar con incongruencias o incompatibilidades que podrían surgir de una implementación modular.',
+            'Dada la infraestructura pobre, podría haber dificultades técnicas durante la implementación, lo que podría paralizar o relentizar las operaciones comerciales. Por otro lado, la organización no cuenta con un departamento de sistemas por lo que podría resultar en costos adicionales si la empresa necesita contratar frecuentemente a expertos externos o consultores para gestionar, adaptar o solucionar problemas en el sistema. Además, la resistencia al cambio por parte del personal puede amplificar estos problemas, ya que podrían no estar preparados o dispuestos a adaptarse rápidamente a la nueva tecnología. Esto puede resultar en errores, confusiones y pérdidas económicas, especialmente si no hay un plan de contingencia adecuado.',
+          ],
+          [
+            'On premise y modular',
+            'Al adoptar un enfoque modular, la empresa puede priorizar e implementar ciertas funciones lo que permite una transición más suave y gestionable, se puede empezar por el área que ha expresado tener mayor disposición por el cambio, como es el caso del área de ventas online. Esto reduce el impacto operativo y los riesgos asociados con grandes cambios. Además, al estar on-premise, la empresa tiene un control directo y total sobre sus datos e infraestructura, lo que puede ser crucial para adaptar y personalizar el sistema según sus necesidades específicas sin depender de terceros. Esta combinación facilita la adaptación al ritmo de la empresa y permite ajustes y correcciones en función de las lecciones aprendidas con cada módulo implementado.',
+            'Actualmente la organización no cuenta con un departamento de sistemas y por lo que hay una falta de experiencia técnica y capacidad de gestión interna. Sin un equipo especializado en sistemas, la empresa puede enfrentar dificultades en la configuración, mantenimiento, actualizaciones y resolución de problemas del sistema. Esto puede llevar a interrupciones operativas, vulnerabilidades de seguridad o un uso ineficiente del sistema. Además, podría resultar en costos adicionales si la empresa necesita contratar frecuentemente a expertos externos o consultores para gestionar, adaptar o solucionar problemas en el sistema. Respecto al enfoque modular puede traer resistencia por parte de los empleados al no querer perder tiempo en registrar las operaciones en 2 sistemas diferentes.',
+          ],
+          [
+            'Saas y Big bang',
+            'Al adoptar todo a la vez, las funciones del sistema están disponibles inmediatamente después de la implementación. En comparación con soluciones on-premise, SaaS a menudo tiene costos iniciales más bajos. Las plataformas SaaS suelen actualizar automáticamente, asegurando que la empresa siempre cuente con la versión más reciente y no necesite administrar la infraestructura. Dado que es basado en la nube, los usuarios pueden acceder al sistema desde cualquier lugar con conexión a internet, esto les vendría muy bien, debido a que tienen varios puntos de venta.',
+            'Al igual que en el sistema on-premise – Big-Bang, un cambio abrupto puede encontrar resistencia de los empleados. Al cambiar todo a la vez, si algo sale mal, puede tener un gran impacto operativo.',
+          ],
+          [
+            'Saas y modular',
+            'Permite a la empresa adaptarse poco a poco, reduciendo la resistencia y facilitando el entrenamiento. En este caso, si falla un módulo en específico, esto no afectará el sistema completo. Se puede priorizar qué implementar basándose en necesidades urgentes o en oportunidades de aceptación al cambio. Además, los costos serán menores que una solución on-premise y se desliga de la responsabilidad de administrar y configurar servidores.',
+            'Puede llevar más tiempo tener el sistema completo en funcionamiento. Diferentes departamentos o funciones podrían estar usando sistemas diferentes durante el período de transición, aunque actualmente ya se trabaja de este modo así que no habría gran diferencia. Respecto al enfoque modular puede traer resistencia por parte de los empleados al no querer perder tiempo en registrar las operaciones en 2 sistemas diferentes.',
+          ],
+        ]}
+      />
     </div>
     <div class="w-full h-8"></div>
     <div class="w-full h-8"></div>
