@@ -3,6 +3,8 @@ import AppTable from '../../../components/AppTable.astro';
 import HighlightedText from '../../../components/HighlightedText.astro';
 import TitleBlue from '../../../components/TitleBlue.astro';
 import CaseLayout from '../../../layouts/CaseLayout.astro';
+import RfpChart from '../../../components/molecules/RfpChart';
+import EvaluacionEconomica from '../../../components/molecules/EvaluacionEconomica';
 
 const softwares = [
   {
@@ -220,6 +222,131 @@ const softwares = [
         Estas dos opciones ofrecen soluciones sólidas para satisfacer las
         necesidades y prioridades de nuestro cliente.
       </p>
+    </div>
+  </div>
+  <TitleBlue>Request For Proposal (RFP)</TitleBlue>
+  <p class="pt-4">
+    Un RFP (siglas de "Request For Proposal") es un documento o artefacto que se
+    elabora con el objetivo de explicitar las “necesidades de la organización”
+    de la manera más objetiva posible. Esto permite solicitar propuestas de
+    soluciones a proveedores, con el fin de poder realizar una comparación justa
+    y homogénea.
+  </p>
+  <RfpChart client:load />
+
+  <div class="grid md:grid-cols-8 py-12 gap-4">
+    <h2 class="sm:col-span-2 text-2xl text-tt-blue">
+      Resultados de la evaluación
+    </h2>
+    <div class="md:col-span-6 grid grid-cols-2 items-baseline">
+      <div class="flex flex-col items-center justify-center gap-2">
+        <img
+          style="mix-blend-mode:multiply"
+          class="mx-auto pb-4 aspect-video object-contain"
+          src={softwares[0].logo}
+          alt=""
+        />
+        <p
+          class="font-bold text-3xl underline underline-offset-8 decoration-tt-blue"
+        >
+          84.20%
+        </p>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <img
+          style="mix-blend-mode:multiply"
+          class="mx-auto pb-4 aspect-video object-contain"
+          src={softwares[1].logo}
+          alt=""
+        />
+        <p class="font-bold text-3xl">83.79%</p>
+      </div>
+    </div>
+  </div>
+  <div class="flex items-center justify-center pb-12">
+    <a href="/docs/rfp.xlsx" target="_blank">
+      <button
+        class="bg-tt-blue-2 text-white py-2 px-8 rounded-md text-sm font-light flex items-center gap-2"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M14 3V7C14 7.26522 14.1054 7.51957 14.2929 7.70711C14.4804 7.89464 14.7348 8 15 8H19"
+            stroke="white"
+            stroke-width="0.941176"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M12 17V11M17 21H7C6.46957 21 5.96086 20.7893 5.58579 20.4142C5.21071 20.0391 5 19.5304 5 19V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H14L19 8V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21Z"
+            stroke="white"
+            stroke-width="0.941176"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M9.5 14.5L12 17L14.5 14.5"
+            stroke="white"
+            stroke-width="0.941176"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+         Descargar análisis detallado
+      </button>
+    </a>
+  </div>
+  <div class="py-12">
+    <TitleBlue>Evaluación Económica</TitleBlue>
+    <p class="pt-4">
+      La evaluación económica de un proyecto tiene dos dimensiones, los costos
+      Directos y los Indirectos. Dentro de los costos Directos se busca
+      determinar cuánto estresará financieramente a la organización la
+      implementación del proyecto y cuanto impactará en el resultado, la
+      ejecución regular del mismo. Para esto se hace una evaluación de los
+      costos iniciales, comúnmente relacionados con las inversiones de capital
+      (CAPEX) y las inversiones recurrentes, generalmente relacionadas a los
+      costos operativos (OPEX) Dependiendo de las estrategias
+      económicas-financieras de cada organización se adoptarán diferentes
+      caminos de ejecución de proyectos.
+    </p>
+    <EvaluacionEconomica client:load />
+    <div class="flex items-center justify-center">
+      <a href="/docs/evaluacion-economica.xlsx" target="_blank">
+        <button
+          class="bg-tt-blue-2 text-white py-2 px-8 rounded-md text-sm font-light flex items-center gap-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M14 3V7C14 7.26522 14.1054 7.51957 14.2929 7.70711C14.4804 7.89464 14.7348 8 15 8H19"
+              stroke="white"
+              stroke-width="0.941176"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M12 17V11M17 21H7C6.46957 21 5.96086 20.7893 5.58579 20.4142C5.21071 20.0391 5 19.5304 5 19V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H14L19 8V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21Z"
+              stroke="white"
+              stroke-width="0.941176"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M9.5 14.5L12 17L14.5 14.5"
+              stroke="white"
+              stroke-width="0.941176"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+           Descargar análisis detallado
+        </button>
+      </a>
     </div>
   </div>
 </CaseLayout>
