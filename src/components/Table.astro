@@ -1,0 +1,33 @@
+---
+interface Props {
+  items: {
+    title: string;
+    description: string;
+  }[];
+  title: string;
+}
+
+const { items, title } = Astro.props;
+---
+
+<div class="bg-transparent">
+  <h2 class="bg-tt-blue-2 text-white p-4 mb-4">
+    {title}
+  </h2>
+  {
+    items?.map(({ title, description }, index) => (
+      <div
+        class:list={[
+          {
+            'bg-white': index % 2 === 0,
+            'bg-[#FAF7F3]': index % 2 != 0,
+          },
+        ]}
+        class="grid sm:grid-cols-6 gap-4 p-4 mb-4"
+      >
+        <h4 class="sm:col-span-2 md:col-span-1">{title}:</h4>
+        <p class="sm:col-span-4 md:col-span-5">{description}</p>
+      </div>
+    ))
+  }
+</div>

@@ -65,8 +65,8 @@ const ValuesSlider = () => {
               Buena Relación con el cliente
             </h2>
             <p className="text-sm font-extralight">
-              Buscamos constantemente nuevas tendencias y en busca de utilizar
-              tecnologías para innovar y crecer la organización.
+              Mantener y crecer nuestra relación con los clientes son nuestra
+              máxima prioridad
             </p>
           </div>
         </SwiperSlide>

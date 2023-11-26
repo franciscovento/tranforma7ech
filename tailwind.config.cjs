@@ -13,7 +13,8 @@ module.exports = {
 				secondary: '#43466f',
 				"tt-blue": '#868DF5',
 				'tt-text': '#111827',
-				"tt-blue-2": "#434671"
+				"tt-blue-2": "#434671",
+				"tt-beige": "#F2EAE2"
 			}
 		},
 	},

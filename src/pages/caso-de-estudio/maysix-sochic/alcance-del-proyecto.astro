@@ -1,9 +1,243 @@
 ---
 import CaseLayout from '../../../layouts/CaseLayout.astro';
+import TitleBlue from '../../../components/TitleBlue.astro';
+import HighlightedText from '../../../components/HighlightedText.astro';
+import beneficios from '../../../data/beneficios';
+import Table from '../../../components/Table.astro';
 ---
 
 <CaseLayout>
-  <div class="py-12">
-    <h3>Esta página está en construcción...</h3>
+  <div class="w-full h-8"></div>
+  <p class="py-12">
+    El proyecto se originó a partir de conversaciones con el sponsor, en este
+    caso, uno de los encargados de los locales, y posteriormente captó el
+    interés de uno de los socios fundadores. Después de realizar un exhaustivo
+    relevamiento y análisis, con el objetivo de lograr un crecimiento como
+    organización, se establecieron los objetivos fundamentales de este proyecto,
+    entre los cuales destaca la alineación de los sistemas con los objetivos
+    estratégicos de la organización.
+    <br />
+    <br />
+     El propósito central del proyecto es <HighlightedText>
+      centralizar el stock y maximizar las ganancias
+    </HighlightedText> para cumplir con las metas establecidas para el año 2024.
+    La centralización del stock pretende mejorar los procesos, eliminar pasos
+    innecesarios, reducir pérdidas y lograr una mayor consistencia entre el
+    stock físico y el lógico. Estos esfuerzos están destinados a impulsar el
+    crecimiento y la eficiencia operativa de la organización en su conjunto.
+  </p>
+  <div class="grid lg:grid-cols-2">
+    <div class="bg-tt-beige px-4 md:px-12 py-12">
+      <div class="flex flex-col items-center justify-center gap-4">
+        <span
+          class="flex items-center justify-center h-12 w-12 bg-white rounded-full"
+        >
+          &#10003;</span
+        >
+        <h3 class="text-xl text-center font-semibold text-tt-blue font-nunito">
+          Objetivos
+        </h3>
+      </div>
+      <ul
+        class="text-tt-text font-extralight list-disc ml-5 py-8 flex flex-col gap-4 text-md"
+      >
+        <li>
+          El alcance del presente proyecto incluye una propuesta de integración
+          del stock de las tiendas y sucursales, a través de un sistema de
+          gestión de stock centralizado.
+        </li>
+        <li>
+          Del análisis de brechas previo surge la necesidad de cubrir los
+          problemas referidos a la gestión de inventario físico e integrar la
+          información referente. De acuerdo a la agrupación de los bloques, se
+          puede ver el impacto de la solución planteada en los 3 aspectos
+          analizados: a nivel de Procesos; un sistema de gestión de stock
+          centralizada, a nivel de Datos y Aplicaciones; una base de datos
+          centralizada que alimente y sea alimentada por el sistema de gestión,
+          a nivel de Tecnología; un servidor en la nube que soporte la
+        </li>
+        <li>
+          La solución planteada en el proyecto contribuye directamente al
+          objetivo estratégico del cliente de “Integrar las distintas bases de
+          datos de los sistemas, así como poder controlar los stocks”
+        </li>
+      </ul>
+    </div>
+    <div class="bg-tt-blue-2 px-4 md:px-12 py-12">
+      <div class="flex flex-col items-center justify-center gap-4">
+        <span
+          class="flex items-center justify-center h-12 w-12 bg-tt-blue text-white rounded-full"
+        >
+          {'X'}</span
+        >
+        <h3 class="text-xl text-center font-semibold text-white font-nunito">
+          Exclusiones
+        </h3>
+      </div>
+      <ul
+        class="text-white font-extralight list-disc ml-5 py-8 flex flex-col gap-4 text-md"
+      >
+        <li>
+          El alcance de este proyecto finaliza con la recomendación de la
+          solución parcial y del proveedor. En un principio la consultora no
+          participará de la implementación de dicho proyecto. En caso de que el
+          cliente quiera que la consultora lo acompañe durante la implementación
+          del mismo, se tomará como un proyecto y trabajo de consultoria nuevo.
+        </li>
+        <li>
+          No se seleccionará en nombre del cliente ninguna opción. De comienzo a
+          fin del proyecto, todo objetivo se basará en recomendaciones y
+          propuestas.
+        </li>
+        <li>
+          No se incluye dentro del alcance del proyecto capacitación alguna.
+        </li>
+        <li>
+          No se realizará ningún proceso de compra de hardware necesario para
+          llevar a cabo las soluciones propuestas.
+        </li>
+        <li>
+          Todo proceso no mencionado taxatívamente en los objetivos específicos
+          queda fuera del alcance.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="w-full h-8"></div>
+  <div class="grid sm:grid-cols-6 py-12 gap-4">
+    <h2 class="sm:col-span-1 text-2xl text-tt-blue pb-4">
+      Beneficios esperados
+    </h2>
+    <div class="sm:col-span-5">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+          beneficios.map((beneficio) => {
+            return (
+              <div class="border border-secondary rounded-2xl p-8 flex flex-col gap-4">
+                <h3 class="text-xl text-secondary font-medium">
+                  {beneficio.title}
+                </h3>
+                <p class="text-sm">{beneficio.content}</p>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+  <div class="w-full h-12"></div>
+  <div class="web-banner bg-tt-beige">
+    <div class="web-container flex flex-col items-center justify-center gap-8">
+      <div class="w-full h-12"></div>
+      <h3
+        class="uppercase text-tt-blue text-2xl font-bold flex flex-col items-center justify-center gap-4 text-center"
+      >
+        Work Breakdown Structure (WBS)
+      </h3>
+      <img style="mix-blend-mode:multiply" src="/wbs.png" />
+      <div class="w-full h-12"></div>
+    </div>
+  </div>
+  <div class="web-banner">
+    <div class="web-container flex flex-col items-center justify-center gap-8">
+      <div class="w-full h-12"></div>
+      <h3
+        class="uppercase text-tt-blue text-2xl font-bold flex flex-col items-center justify-center gap-4 text-center"
+      >
+        Diagrama de Gantt
+      </h3>
+      <div class="grid sm:grid-cols-2 gap-4 items-center">
+        <img style="mix-blend-mode:multiply" src="/gantt2.png" />
+        <img style="mix-blend-mode:multiply" src="/gantt1.png" />
+      </div>
+      <div class="w-full h-12"></div>
+    </div>
+  </div>
+  <div class="web-banner bg-tt-beige">
+    <div class="web-container flex flex-col items-center justify-center gap-8">
+      <div class="w-full h-12"></div>
+      <h3
+        class="uppercase text-tt-blue text-2xl font-bold flex flex-col items-center justify-center gap-4 text-center"
+      >
+        Matriz de Stakeholders
+      </h3>
+      <img style="mix-blend-mode:multiply" src="/stakeholders.png" />
+      <div class="w-full h-12"></div>
+    </div>
+    <div class="web-container flex flex-col gap-4">
+      <Table
+        title="Latentes (alto poder y bajo interés) -> informar"
+        items={[
+          {
+            title: 'Encargado de Sochic (segunda sucursal):',
+            description:
+              'En la sucursal no tienen venta online, de manera que en ese local sólo se encuentra el depósito físico de ese local, esto hace que no se vea tan beneficiado por la integración del stock, ya que deberían adquirir la mercadería del stock que se encuentra en otro lugar físico (aunque los locales se encuentran geográficamente cercanos).',
+          },
+        ]}
+      />
+      <Table
+        title="Promotores (alto poder y alto interés) -> involucrar"
+        items={[
+          {
+            title: 'Encargado general:',
+            description:
+              'Al contar con información consolidada y más fiable, esta será de utilidad para la toma de decisiones y gestión de los locales.',
+          },
+          {
+            title: 'Socio mayoritario (dueños):',
+            description:
+              'Al contar con información consolidada y más fiable, esta será de utilidad para la toma de decisiones. El stock integrado permitirá reducir la pérdida de ventas por falta de stock y al saber con qué productos se cuenta en cada momento permitirá venderlos a un mejor precio en el momento oportuno (actualmente por inconsistencia en los registros de stock se suele detectar disponibilidad de mercadería cuando la misma ya está fuera de temporada, debiendo vender esta a un menor precio que el que se podría haber obtenido si se la hubiera vendido cuando estaba la temporada vigente). De este modo se puede favorecer al aumento de ganancias.',
+          },
+        ]}
+      />
+      <Table
+        title="Defensores (bajo poder y alto interés) -> reportar"
+        items={[
+          {
+            title: 'Encargada de Maysix:',
+            description:
+              'Reducir la pérdida de ventas por falta de stock en el depósito del local.',
+          },
+          {
+            title: 'Vendedores del local:',
+            description:
+              'Reducir la pérdida de ventas por falta de stock en el depósito del local. Al poder consultarse el stock integrado, los productos podrán obtenerse del depósito donde haya stock.',
+          },
+          {
+            title: 'Vendedores online:',
+            description:
+              'Reducir la pérdida de ventas por falta de stock en el depósito del local.Al estar el stock integrado, en caso de no disponer en el depósito online del producto solicitado en el pedido, este podrá ser adquirido del depósito físico donde haya stock.',
+          },
+          {
+            title: 'Clientes:',
+            description:
+              'La integración del stock les permitirá adquirir los productos deseados independientemente del canal por el que lo soliciten, (ej. Si realizan una compra online y el producto deseado no se encuentra en el stock físico de la tienda online, pero si en el depósito de alguno de los locales, la venta podrá realizarse de todos modos)',
+          },
+          {
+            title: 'Proveedor de DOMO:',
+            description:
+              'Al ser Maysix y Sochic uno de sus clientes más importantes, va a estar interesado en que la empresa no cambie de sistema o que adquiera la nueva solución que están desarrollando.',
+          },
+        ]}
+      />
+
+      <Table
+        title="Apáticos (bajo poder y bajo interés) -> monitorizar"
+        items={[
+          {
+            title: 'Proveedor de WordPress:',
+            description:
+              'Dado que en esta instancia se mantendría la utilización del sistema WordPress el proveedor del mismo se ve poco afectado por el proyecto de manera que tendrá poco interés en el mismo.',
+          },
+          {
+            title: 'Proveedores de internet:',
+            description:
+              'Al tratarse de un cliente pyme, a los proveedores de internet no les influye de forma significativa la pérdida de este tipo de clientes. A lo sumo podrán verse beneficiados si la nueva implementación implica adquirir un upgrade del servicio contratado actualmente.',
+          },
+        ]}
+      />
+    </div>
+    <div class="w-full h-12"></div>
+    <div class="w-full h-12"></div>
   </div>
 </CaseLayout>

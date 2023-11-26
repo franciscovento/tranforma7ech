@@ -1,0 +1,299 @@
+---
+import AppTable from '../../../components/AppTable.astro';
+import HighlightedText from '../../../components/HighlightedText.astro';
+import MatricesSlider from '../../../components/MatricesSlider';
+import CaseLayout from '../../../layouts/CaseLayout.astro';
+---
+
+<CaseLayout>
+  <div class="w-full h-8"></div>
+  <p class="py-12">
+    El análisis de brechas es un proceso que identifica las diferencias entre el
+    estado actual de una organización y su estado deseado. Ayuda a determinar
+    <strong
+      >qué cambios y acciones son necesarios para alcanzar los objetivos</strong
+    >
+     establecidos, al analizar las deficiencias y las áreas que requieren
+    mejoras. Este enfoque es fundamental para la planificación estratégica y la
+    toma de decisiones informadas en una organización.
+    <br /><br />
+     Aquí es donde aparece el concepto de <strong
+      >“bloque de construcción”</strong
+    > que representa un componente (potencialmente reutilizable) de negocios, de
+    tecnología, de información o una capacidad que puede ser combinada con otros
+    bloques de construcción para entregar arquitecturas y soluciones (parte de
+    un proceso de negocio, interfaces, funcionalidades, subsistemas,
+    plataformas, interoperabilidad, etc.) Cuando se diseña la Arquitectura
+    destino, se establecen <strong>“bloques de solución”</strong>, necesarios
+    para el nuevo modelo, de los cuales se establece “cuáles” son los bloques de
+    construcción de la arquitectura de origen que pueden ser reutilizados.
+  </p>
+  <div
+    class="web-banner py-12 bg-[#F2EAE2] flex flex-col gap-20 overflow-x-scroll"
+  >
+    <MatricesSlider client:load />
+  </div>
+  <div class="w-full h-8"></div>
+  <div class="py-12">
+    <h2 class="text-center text-2xl text-tt-text font-semibold uppercase">
+      Analisis de Brechas
+    </h2>
+    <p class="pt-6">
+      Del listado de ABBs (bloques de construcción) identificados, hemos
+      seleccionado como candidatos los enlistados a continuación, basándonos
+      principalmente en un alcance enfocado en la satisfacción del cliente y los
+      procesos internos. Identificamos varios aspectos que la empresa debe
+      mejorar, especialmente en lo que respecta al seguimiento del stock de sus
+      productos. Con este fin, proponemos la implementación de una solución de
+      stock centralizado que contribuirá al logro de tres objetivos
+      estratégicos: <HighlightedText>
+        mejorar el control de los stocks, reducir los precios en un 5 o 10 % y
+        fortalecer la fidelización de los clientes.
+      </HighlightedText>
+    </p>
+  </div>
+  <div
+    class="pb-12 grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-8 justify-center"
+  >
+    <div class="card">
+      <div class="card-front p-4 bg-primary">
+        <div class="flex flex-col gap-2 items-center justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+          >
+            <path
+              d="M31.6396 6.944C29.303 6.00923 26.6963 6.00923 24.3596 6.944L8.24001 13.398C7.46135 13.7094 6.79375 14.2468 6.32317 14.9409C5.85259 15.6351 5.60059 16.4542 5.59961 17.2928V38.7016C5.59947 39.5412 5.85095 40.3615 6.3216 41.0568C6.79225 41.752 7.46047 42.2902 8.24001 42.602L24.3596 49.0504C26.6963 49.9852 29.303 49.9852 31.6396 49.0504L47.7592 42.602C48.5387 42.2902 49.207 41.752 49.6776 41.0568C50.1483 40.3615 50.3997 39.5412 50.3996 38.7016V17.2928C50.3992 16.4537 50.1474 15.634 49.6768 14.9393C49.2062 14.2446 48.5383 13.7068 47.7592 13.3952L31.6396 6.944ZM25.4012 9.548C27.0701 8.88041 28.9319 8.88041 30.6008 9.548L45.2308 15.4L38.8496 17.948L21.6184 11.06L25.4012 9.548ZM17.8496 12.5636L35.0808 19.4544L27.9996 22.2908L10.7684 15.3972L17.8496 12.5636ZM29.3996 24.7436L47.5996 17.4636V38.6988C47.6001 38.9789 47.5166 39.2526 47.3599 39.4847C47.2031 39.7169 46.9804 39.8966 46.7204 40.0008L30.598 46.4492C30.206 46.6032 29.8056 46.7236 29.3996 46.8076V24.7436ZM26.5996 24.7436V46.8076C26.1903 46.724 25.7892 46.6041 25.4012 46.4492L9.27881 40.0008C9.01928 39.8968 8.79685 39.7175 8.64015 39.4859C8.48345 39.2544 8.39967 38.9812 8.39961 38.7016V17.4664L26.5996 24.7464V24.7436Z"
+              fill="#111827"></path>
+          </svg>
+          <p class="text-2xl text-center font-medium">
+            Gestión de stock centralizado
+          </p>
+        </div>
+      </div>
+      <div class="card-back bg-[#FBDCA0]">
+        <div class="p-4">
+          <p class="text-base">
+            La gestión de stock actual opera de manera descentralizada, ya que
+            la vendedora online y los vendedores presenciales acceden a
+            inventarios separados, sin correlación entre ellos ni con los demás
+            locales. Esta descentralización conduce a situaciones donde puede
+            haber excedente de stock en una área y escasez en otra, generando la
+            necesidad de ofrecer productos en oferta que podrían haberse vendido
+            a precio de lista.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-front p-4 bg-[#E5F77D]">
+        <div class="flex flex-col gap-2 items-center justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+          >
+            <path
+              d="M49 16.3333C49 21.49 39.5967 25.6667 28 25.6667C16.4033 25.6667 7 21.49 7 16.3333C7 11.1767 16.4033 7 28 7C39.5967 7 49 11.1767 49 16.3333Z"
+              fill="#111827"></path>
+            <path
+              d="M49 16.3333C49 21.49 39.5967 25.6667 28 25.6667C16.4033 25.6667 7 21.49 7 16.3333M49 16.3333C49 11.1767 39.5967 7 28 7C16.4033 7 7 11.1767 7 16.3333M49 16.3333V28M7 16.3333V28M49 28C49 33.1567 39.5967 37.3333 28 37.3333C16.4033 37.3333 7 33.1567 7 28M49 28V39.6667C49 44.8233 39.5967 49 28 49C16.4033 49 7 44.8233 7 39.6667V28"
+              stroke="#111827"
+              stroke-width="3.33333"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+          <p class="text-2xl text-center font-medium">
+            Base de datos centralizada
+          </p>
+        </div>
+      </div>
+      <div class="card-back bg-[#F3FFAB]">
+        <div class="p-4">
+          <p class="text-base font-extralight">
+            Para lograr la integración del stock, es necesario implementar una
+            base de datos que se conecte al sistema centralizado de gestión de
+            stock, obteniendo información de este último. En consecuencia, este
+            bloque también se incorpora como parte integral del proyecto.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-front p-4 bg-[#E89B7B]">
+        <div class="flex flex-col gap-2 items-center justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="56"
+            height="56"
+            viewBox="0 0 56 56"
+            fill="none"
+          >
+            <path
+              d="M35.2004 29.0943C35.0568 29.274 34.8792 29.4236 34.6777 29.5346C34.4762 29.6456 34.2548 29.7158 34.0262 29.7411C33.7976 29.7665 33.5662 29.7465 33.3453 29.6824C33.1244 29.6182 32.9183 29.5111 32.7388 29.3673L29.7521 26.9733V34.9999C29.7521 35.4641 29.5677 35.9092 29.2395 36.2374C28.9113 36.5655 28.4662 36.7499 28.0021 36.7499C27.538 36.7499 27.0929 36.5655 26.7647 36.2374C26.4365 35.9092 26.2521 35.4641 26.2521 34.9999V26.9733L23.2608 29.3673C22.8981 29.6572 22.4352 29.7912 21.9737 29.7398C21.5123 29.6883 21.0902 29.4557 20.8003 29.0931C20.5103 28.7304 20.3763 28.2675 20.4278 27.8061C20.4792 27.3446 20.7118 26.9225 21.0744 26.6326L26.9008 21.9706C27.2118 21.7192 27.5998 21.5825 27.9998 21.5833H28.0044C28.4244 21.5833 28.8071 21.7326 29.1081 21.9799L34.9274 26.6326C35.1071 26.7762 35.2568 26.9538 35.3678 27.1553C35.4788 27.3568 35.549 27.5782 35.5743 27.8068C35.5997 28.0355 35.5797 28.2668 35.5155 28.4878C35.4514 28.7087 35.3443 28.9148 35.2004 29.0943Z"
+              fill="black"></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M19.5535 16.7862C20.9935 14.5451 23.1054 12.8171 25.5871 11.8492C28.0689 10.8814 30.7932 10.7235 33.3701 11.398C35.947 12.0725 38.2446 13.545 39.9338 15.6046C41.6231 17.6642 42.6176 20.2054 42.7749 22.8645C44.1681 22.7989 45.5603 23.0129 46.8695 23.4938C48.1787 23.9748 49.3784 24.713 50.3978 25.665C51.4171 26.6169 52.2356 27.7633 52.8049 29.0366C53.3743 30.3099 53.6829 31.6842 53.7126 33.0787C53.7424 34.4731 53.4927 35.8594 52.9782 37.1558C52.4637 38.4522 51.6949 39.6325 50.717 40.627C49.7392 41.6216 48.5721 42.4103 47.2846 42.9467C45.9971 43.4831 44.6153 43.7563 43.2205 43.7502H16.0419C14.0937 43.7476 12.1684 43.3298 10.3944 42.5246C8.62038 41.7195 7.03836 40.5454 5.75377 39.0808C4.46919 37.6161 3.51155 35.8944 2.94469 34.0305C2.37783 32.1667 2.21476 30.2033 2.46636 28.2715C2.71796 26.3396 3.37844 24.4836 4.40379 22.827C5.42913 21.1705 6.79579 19.7515 8.41266 18.6647C10.0295 17.5779 11.8595 16.8483 13.7806 16.5243C15.7016 16.2004 17.6697 16.2897 19.5535 16.7862ZM30.1749 14.4855C28.4569 14.4851 26.7738 14.9697 25.3191 15.8836C23.8644 16.7975 22.6974 18.1036 21.9522 19.6515C21.7608 20.0479 21.4271 20.3576 21.0176 20.5189C20.6081 20.6802 20.1528 20.6812 19.7425 20.5218C18.3449 19.9808 16.8452 19.7542 15.3501 19.858C13.855 19.9619 12.4011 20.3937 11.0916 21.1227C9.78218 21.8518 8.64933 22.8602 7.77353 24.0764C6.89773 25.2926 6.30046 26.6867 6.02415 28.1598C5.74784 29.6328 5.79926 31.1486 6.17476 32.5995C6.55026 34.0504 7.24063 35.4009 8.19684 36.5549C9.15304 37.709 10.3516 38.6383 11.7075 39.277C13.0633 39.9156 14.5431 40.2479 16.0419 40.2502H43.2205C44.2094 40.2498 45.1867 40.0384 46.0873 39.6302C46.9879 39.2219 47.791 38.6261 48.4429 37.8825C49.0948 37.139 49.5805 36.265 49.8676 35.3187C50.1547 34.3725 50.2365 33.3759 50.1075 32.3955C49.9786 31.4151 49.6419 30.4735 49.1199 29.6336C48.598 28.7938 47.9028 28.075 47.0808 27.5253C46.2589 26.9757 45.329 26.6078 44.3535 26.4462C43.3779 26.2846 42.3792 26.3332 41.4239 26.5885C41.1479 26.6625 40.8579 26.6677 40.5794 26.6038C40.301 26.5399 40.0423 26.4087 39.8262 26.2218C39.6101 26.0349 39.443 25.798 39.3396 25.5316C39.2361 25.2652 39.1995 24.9776 39.2329 24.6938C39.3859 23.4135 39.2658 22.1154 38.8805 20.8849C38.4951 19.6544 37.8534 18.5195 36.9975 17.5552C36.1416 16.5908 35.091 15.8188 33.915 15.2901C32.739 14.7614 31.4643 14.4856 30.1749 14.4855Z"
+              fill="black"></path>
+          </svg>
+          <p class="text-2xl text-center font-medium">Servidor en la Nube</p>
+        </div>
+      </div>
+      <div class="card-back bg-[#FFDCCD]">
+        <div class="p-4">
+          <p class="text-base font-extralight">
+            Se introduce un servidor en la nube como componente clave del
+            sistema, brindando la capacidad para que las distintas sucursales
+            establezcan conexión y accedan de manera eficiente a la información
+            detallada sobre el stock y las ventas de cada tienda. Este enfoque
+            centralizado facilita la coordinación y el intercambio de datos en
+            tiempo real entre las sucursales, mejorando la eficiencia operativa
+            y permitiendo una toma de decisiones más informada y oportuna.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="web-banner bg-[#F2EAE2]">
+    <div class="web-container">
+      <div class="w-full h-8"></div>
+      <div class="py-12">
+        <h2 class="text-center text-2xl text-tt-text font-semibold uppercase">
+          Escenario a Ejecutar
+        </h2>
+        <div class="flex flex-col gap-4">
+          <p class="pt-6">
+            Se ha seleccionado el escenario 4 - <HighlightedText>
+              SaaS y modular
+            </HighlightedText>. Esta elección se fundamenta en la situación
+            financiera actual del cliente, donde el presupuesto ya está
+            comprometido y no permite afrontar los costos asociados a una
+            instalación y mantenimiento on-premise. La opción por una solución
+            SaaS se basa en su menor costo de entrada, permitiendo una
+            implementación más viable dentro de los límites presupuestarios
+            existentes.
+            <br /><br />
+             Además, se ha optado por una implementación modular para abordar la
+            menor curva de aprendizaje por parte de los empleados y suavizar la
+            resistencia generalizada al cambio. Esta estrategia modular
+            posibilita la introducción de componentes de la solución de manera
+            gradual, facilitando la adaptación y la incorporación de nuevas
+            funcionalidades sin generar una interrupción significativa en las
+            operaciones diarias.
+            <br /><br />
+             Un factor adicional es que la organización carece de personal
+            técnico especializado para llevar a cabo la implementación de una
+            solución on-premise, reforzando la elección de una solución SaaS que
+            reduce la dependencia de recursos técnicos internos. Este enfoque
+            busca maximizar la eficiencia en la implementación y asegurar una
+            transición sin contratiempos hacia la nueva solución.
+          </p>
+          <a
+            class="bg-tt-blue-2 text-white py-2 px-8 rounded-md text-sm font-light flex items-end gap-2 w-fit"
+            download="arquitectura_negocios_maysix.jpg"
+            href={'/escenarios.png'}
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M14 3V7C14 7.26522 14.1054 7.51957 14.2929 7.70711C14.4804 7.89464 14.7348 8 15 8H19"
+                stroke="white"
+                stroke-width="0.941176"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M12 17V11M17 21H7C6.46957 21 5.96086 20.7893 5.58579 20.4142C5.21071 20.0391 5 19.5304 5 19V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H14L19 8V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21Z"
+                stroke="white"
+                stroke-width="0.941176"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M9.5 14.5L12 17L14.5 14.5"
+                stroke="white"
+                stroke-width="0.941176"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg>
+             Descargar esquema
+          </a>
+        </div>
+      </div>
+      <AppTable
+        columns={['Escenario', 'Fortalezas', 'Debilidades']}
+        rows={[
+          [
+            'On premise y Big bang',
+            'Al implementar un sistema on-premise con un enfoque Big Bang, la empresa tiene un control absoluto sobre su infraestructura y software desde el principio. Esto significa que pueden adaptar, personalizar y asegurar el sistema según sus necesidades exactas sin depender de terceros. Además, al realizar la transición de una sola vez, la empresa puede tener una visión y gestión unificada del sistema, sin lidiar con incongruencias o incompatibilidades que podrían surgir de una implementación modular.',
+            'Dada la infraestructura pobre, podría haber dificultades técnicas durante la implementación, lo que podría paralizar o relentizar las operaciones comerciales. Por otro lado, la organización no cuenta con un departamento de sistemas por lo que podría resultar en costos adicionales si la empresa necesita contratar frecuentemente a expertos externos o consultores para gestionar, adaptar o solucionar problemas en el sistema. Además, la resistencia al cambio por parte del personal puede amplificar estos problemas, ya que podrían no estar preparados o dispuestos a adaptarse rápidamente a la nueva tecnología. Esto puede resultar en errores, confusiones y pérdidas económicas, especialmente si no hay un plan de contingencia adecuado.',
+          ],
+          [
+            'On premise y modular',
+            'Al adoptar un enfoque modular, la empresa puede priorizar e implementar ciertas funciones lo que permite una transición más suave y gestionable, se puede empezar por el área que ha expresado tener mayor disposición por el cambio, como es el caso del área de ventas online. Esto reduce el impacto operativo y los riesgos asociados con grandes cambios. Además, al estar on-premise, la empresa tiene un control directo y total sobre sus datos e infraestructura, lo que puede ser crucial para adaptar y personalizar el sistema según sus necesidades específicas sin depender de terceros. Esta combinación facilita la adaptación al ritmo de la empresa y permite ajustes y correcciones en función de las lecciones aprendidas con cada módulo implementado.',
+            'Actualmente la organización no cuenta con un departamento de sistemas y por lo que hay una falta de experiencia técnica y capacidad de gestión interna. Sin un equipo especializado en sistemas, la empresa puede enfrentar dificultades en la configuración, mantenimiento, actualizaciones y resolución de problemas del sistema. Esto puede llevar a interrupciones operativas, vulnerabilidades de seguridad o un uso ineficiente del sistema. Además, podría resultar en costos adicionales si la empresa necesita contratar frecuentemente a expertos externos o consultores para gestionar, adaptar o solucionar problemas en el sistema. Respecto al enfoque modular puede traer resistencia por parte de los empleados al no querer perder tiempo en registrar las operaciones en 2 sistemas diferentes.',
+          ],
+          [
+            'Saas y Big bang',
+            'Al adoptar todo a la vez, las funciones del sistema están disponibles inmediatamente después de la implementación. En comparación con soluciones on-premise, SaaS a menudo tiene costos iniciales más bajos. Las plataformas SaaS suelen actualizar automáticamente, asegurando que la empresa siempre cuente con la versión más reciente y no necesite administrar la infraestructura. Dado que es basado en la nube, los usuarios pueden acceder al sistema desde cualquier lugar con conexión a internet, esto les vendría muy bien, debido a que tienen varios puntos de venta.',
+            'Al igual que en el sistema on-premise – Big-Bang, un cambio abrupto puede encontrar resistencia de los empleados. Al cambiar todo a la vez, si algo sale mal, puede tener un gran impacto operativo.',
+          ],
+          [
+            'Saas y modular',
+            'Permite a la empresa adaptarse poco a poco, reduciendo la resistencia y facilitando el entrenamiento. En este caso, si falla un módulo en específico, esto no afectará el sistema completo. Se puede priorizar qué implementar basándose en necesidades urgentes o en oportunidades de aceptación al cambio. Además, los costos serán menores que una solución on-premise y se desliga de la responsabilidad de administrar y configurar servidores.',
+            'Puede llevar más tiempo tener el sistema completo en funcionamiento. Diferentes departamentos o funciones podrían estar usando sistemas diferentes durante el período de transición, aunque actualmente ya se trabaja de este modo así que no habría gran diferencia. Respecto al enfoque modular puede traer resistencia por parte de los empleados al no querer perder tiempo en registrar las operaciones en 2 sistemas diferentes.',
+          ],
+        ]}
+      />
+    </div>
+    <div class="w-full h-8"></div>
+    <div class="w-full h-8"></div>
+  </div>
+</CaseLayout>
+<style>
+  .card {
+    perspective: 1000px;
+    min-height: 400px;
+  }
+
+  .card-front,
+  .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  .card-front {
+    border-radius: 10px;
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+    border-radius: 10px;
+  }
+
+  .card:hover .card-front {
+    transform: rotateY(180deg);
+  }
+
+  .card:hover .card-back {
+    transform: rotateY(0);
+  }
+</style>
