@@ -232,7 +232,7 @@ const softwares = [
     soluciones a proveedores, con el fin de poder realizar una comparación justa
     y homogénea.
   </p>
-  <RfpChart client:load />
+  <RfpChart client:only="react" />
 
   <div class="grid md:grid-cols-8 py-12 gap-4">
     <h2 class="sm:col-span-2 text-2xl text-tt-blue">
@@ -312,7 +312,7 @@ const softwares = [
       económicas-financieras de cada organización se adoptarán diferentes
       caminos de ejecución de proyectos.
     </p>
-    <EvaluacionEconomica client:load />
+    <EvaluacionEconomica client:only="react" />
     <div class="flex items-center justify-center">
       <a href="/docs/evaluacion-economica.xlsx" target="_blank">
         <button
