@@ -1,9 +1,28 @@
 ---
 import CaseLayout from '../../../layouts/CaseLayout.astro';
+import shadow from '../../../components/assets/shadow.png';
+import woocommerce from '../../../components/assets/woocommerce.png';
+import HighlightedText from '../../../components/HighlightedText.astro';
 ---
 
-<CaseLayout>
+<CaseLayout title="Conclusiones">
   <div class="py-12">
-    <h3>Esta página está en construcción...</h3>
+    <img class="max-w-md mx-auto" src={woocommerce.src} alt="" />
+    <div class="grid sm:grid-cols-7 py-12">
+      <div class="sm:col-span-2">
+        <h2 class="text-2xl text-tt-blue">WooCommerce</h2>
+      </div>
+      <div class="sm:col-span-5">
+        <p class="text-tt-text font-extralight pb-8">
+
+          Luego de un profundo análisis de todos los aspectos relevantes para el proyecto y para nuestro cliente, <HighlightedText>sugerimos desarrollar el proyecto con WooCommerce</HighlightedText> (junto al actual proveedor) para realizar el desarrollo de la centralización del stock. En resumen, detectamos que cumple por defecto con casi todos los requerimientos técnico-funcionales del sistema (y los que no, son fácilmente adptables con desarrollos específicos), permite licitar futuros proveedores (no estando atado a un único proveedor, como en el caso de DOMO), y es económicamente más rentable de sostener en el mediano/largo plazo.
+          <br/><br/>
+          En conclusión, el proceso de análisis y propuesta que hemos llevado a cabo para Maysix y Sochic ha sido integral y adaptativo, abordando desde la comprensión profunda de su arquitectura empresarial hasta la identificación específica de problemáticas y la evaluación detallada de proveedores. Hemos destacado la centralización del stock como un objetivo clave para el corto plazo, fundamentando nuestras recomendaciones en un análisis profundo de la situación del cliente y las mejoras potenciales. La elección de expandir el uso de WooCommerce como la solución propuesta se basa en criterios específicos y en la alineación con los objetivos estratégicos del cliente.
+          <br/><br/>
+          A través de este enfoque colaborativo y personalizado, buscamos no solo abordar los desafíos inmediatos sino también sentar las bases para el crecimiento sostenido y el éxito continuo de Maysix y Sochic en el competitivo mercado del retail mayorista de indumentaria femenina.
+        </p>
+        
+      </div>
+    </div>
   </div>
 </CaseLayout>
